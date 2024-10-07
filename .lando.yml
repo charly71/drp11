@@ -1,0 +1,12 @@
+name: drp11
+recipe: drupal11
+config:
+  webroot: web
+services:
+  mailserver:
+    type: mailhog
+    portforward: false
+    hogfrom:
+      - appserver
+  dbadmin:
+    type: phpmyadmin
